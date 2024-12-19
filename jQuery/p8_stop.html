@@ -1,0 +1,43 @@
+<!--8/11/23-->
+<html>
+<head>
+<title>p8</title>
+<style>
+p{
+	background: aqua;
+	height: 100px;
+	width: 100px;
+	text-align: center;
+	position: relative;
+}
+</style>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+	$("#b1").click(function(){
+		$("#p1").animate({left: "800px"}, 10000);   
+	}),
+	$("#b2").click(function(){
+		$("#p1").stop(false, true); //does not stops all animations of p1, stops at end of animation(if false, works as a pause button).                                                     
+	}),
+	$("#b3").click(function(){
+		$("#p2").animate({top: "500px", left: "800px"}, 5000);   
+	}),
+	$("#b4").click(function(){
+		$("#p2").stop(true, false); //stops all animation of p2, does not stops at end of animation(pauses).                                                     
+	});
+});
+</script>
+</head>
+
+<body>
+<p id="p1">This is p1 paragraph.</p>
+<button id="b1">click to animate p1</button>
+<button id="b2">click to stop animation</button>
+<br>
+<p id="p2">This is p2 paragraph.</p>
+<button id="b3">click to animate p2</button>
+<button id="b4">click to stop all animation</button>
+</body>
+</html>

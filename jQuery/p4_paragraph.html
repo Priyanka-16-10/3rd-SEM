@@ -1,0 +1,41 @@
+<!--1/11/23-->
+<!-- update: 6/11/23 -->
+<html>
+<head>
+<title>p4</title>
+<style>
+#id1{
+	background: red;
+}
+</style>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+	$("#p1").click(function(){
+		$(this).hide();
+	}),
+	$("#b1").click(function(){
+		$("#p2").toggle();
+	}),
+	$("#b3").click(function(){
+		$("#p3").slideDown();
+	}),
+	$("#b4").click(function(){
+		$("#p4").fadeTo(500, 0.1);
+	});
+});
+</script>
+</head>
+
+<body>
+<p id="p1">This is p1 paragraph.</p>
+<p id="p2">This is p2 paragraph.</p>
+<p id="p3">This is p3 paragraph.</p>
+<p id="p4">This is p4 paragraph.</p>
+<button id="b1">Hide/Unhide P2</button>
+<button id="b2">SlideUp P3</button>
+<button id="b3">SlideDown P3</button>
+<button id="b4">FadeTo P4</button>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!--30/10/23-->
+<html>
+<head>
+<title>p1</title>
+<style>
+div{
+	background: gray;
+}
+.c1{
+	background: red;
+}
+#id1{
+	background: blue;
+}
+</style>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+	$("p,.c1").click(function(){
+		$(this).hide();
+	}),
+	$("#id1").hover(function(){
+		$(this).hide();
+	}),
+	$("#id1").mouseleave(function(){
+		$(this).show();
+	}),
+	$("button").click(function(){
+		$(this).hide();
+	});
+});
+</script>
+</head>
+
+<body>
+<div>Click to Hide div(abhi nhi hoga)</div>
+<p>Click to Hide p</p>
+<div class="c1">Click to Hide class c1</div>
+<div id="id1">Hover to Hide id id1</div> <!-- mouseenter and hover are same -->
+<button>Click</button>
+</body>
+</html>
+

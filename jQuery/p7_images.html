@@ -1,0 +1,86 @@
+<!--1/11/23-->
+<html>
+<head>
+<title>p7</title>
+<style>
+#i1{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+#i2{
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+}
+#i3{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}
+#i4{
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+}
+
+#i5{
+	display: none;
+	position: absolute;
+    top: 0px;
+    left: 0px;
+}
+#i6{
+	display: none;
+	position: absolute;
+    bottom: 0px;
+    left: 0px;
+}
+#i7{
+	display: none;
+	position: absolute;
+    	top: 0px;
+    	right: 0px;
+}
+#i8{
+	display: none;
+	position: absolute;
+   	bottom: 0px;
+   	right: 0px;
+}
+button{
+    position: absolute;
+    top: 40%;
+    bottom: 40%;
+    left: 25%;
+    right: 25%;
+}
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+	$("button").hover(function(){
+		$("#i1,#i2").hide();
+		$("#i5,#i6").show();
+	}),
+    	$("button").click(function(){
+		$("#i3,#i4").hide();
+		$("#i7,#i8").show();
+	});
+});
+</script>
+</head>
+<body>
+<img id="i1" src="C:\Users\hp\Desktop\Sidhant_2241002049\jQuery\Media\fox.png" alt="fox" height="60">
+<img id="i2" src="C:\Users\hp\Desktop\Sidhant_2241002049\jQuery\Media\fox.png" alt="fox" height="60">
+<img id="i3" src="C:\Users\hp\Desktop\Sidhant_2241002049\jQuery\Media\fox.png" alt="fox" height="60">
+<img id="i4" src="C:\Users\hp\Desktop\Sidhant_2241002049\jQuery\Media\fox.png" alt="fox" height="60">
+
+<img id="i5" src="C:\Users\hp\Desktop\Sidhant_2241002049\jQuery\Media\Tom and Jerry1.jpg" alt="tj" height="60">
+<img id="i6" src="C:\Users\hp\Desktop\Sidhant_2241002049\jQuery\Media\Tom and Jerry1.jpg" alt="tj" height="60">
+<img id="i7" src="C:\Users\hp\Desktop\Sidhant_2241002049\jQuery\Media\Tom and Jerry1.jpg" alt="tj" height="60">
+<img id="i8" src="C:\Users\hp\Desktop\Sidhant_2241002049\jQuery\Media\Tom and Jerry1.jpg" alt="tj" height="60">
+
+<button>Hover to change left, click to change right</button>
+</body>
+</html>

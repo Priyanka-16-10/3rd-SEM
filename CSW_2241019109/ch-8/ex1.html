@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="code.jquery.com_jquery-3.7.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#searchbtn").click(function(){
+                alert("Search button is clicked. Value of searched text is" + $("#searchtxt").val()+ "Category: "+ $("#ctg").children(":selected").html());
+            });
+        });
+    </script>
+    <style>
+        body{
+            background-image: url(bg1.jpg);
+            background-size: cover;
+        }
+        h1,p{
+            text-align: center;
+        }
+        h1{
+            font-size: 70px;
+            padding: 5px;
+            background-color: lightsteelblue;
+            color: rgb(200, 42, 140);
+        }
+        p{
+            font-size: 20px;
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>Welcome To MyEshop</h1>
+    
+</body>
+</html>

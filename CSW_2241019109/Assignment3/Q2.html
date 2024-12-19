@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Q2-Clicks</title>
+    <script src="code.jquery.com_jquery-3.7.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+	      $("p").click(function(){
+		     $("#d1").hide();
+	      }),
+          $("p").dblclick(function(){
+            $("#d2").fadeToggle(4000);
+          });
+        });
+    </script>
+    <style>
+        #d1{
+            background: rgb(225, 8, 232);
+            width: 50px;
+        }
+        #d2{
+            background: rgb(109, 250, 15);
+            width: 50px;
+        }
+        p{
+            display: inline;
+            background-color: gainsboro;
+            border: 1px solid black;
+        }
+        </style>
+</head>
+<body>
+    <p>Click me!</p><br><br>
+    <div id="d1">id1</div><br>
+    <div id="d2">id2</div>
+</body>
+</html>

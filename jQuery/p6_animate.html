@@ -1,0 +1,26 @@
+<!--2/11/23-->
+<html>
+<head>
+<title>p6</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+	$("#b1").click(function(){
+		$("#p1").animate({
+            		left: "20px", margin: "20px", opacity: ".2"
+        	});
+	});
+});
+</script>
+<style>
+#p1{
+    color: teal;
+    position: relative;
+}
+</style>
+</head>
+<body>
+<p id="p1">This is p1 paragraph.</p>
+<button id="b1">Animate</button>
+</body>
+</html>

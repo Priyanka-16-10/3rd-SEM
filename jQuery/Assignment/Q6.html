@@ -1,0 +1,53 @@
+<!--8/11/23-->
+<html>
+<head>
+<title>Q6</title>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+	$("#b1").click(function(){
+		$("table").append("<tr><td>"+$("#name").val()+"</td><td>"+$("#reg").val()+"</td><td>"+$("#mark").val()+"</td></tr>");
+	}),
+	$("#b2").click(function(){
+		$("td").css("color",$("#color").val());
+	}),
+	$("#b3").click(function(){
+		$("table").remove($("#nrem").val());
+	});
+});
+</script>
+</head>
+
+<body>
+<h1>Table for Marks</h1>
+<table border="1">
+<caption align="bottom">End Sem Marks</caption>
+<thead>
+<tr>
+<th>Name</th>
+<th>Registration No.</th>
+<th>Marks</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Sidhant</td>
+<td>2049</td>
+<td>88</td>
+</tr>
+</tbody>
+</table>
+<br>
+<button id="b1">Add Rows to table</button>
+<input type="text" id="name" placeholder="Enter Name">
+<input type="number" id="reg" placeholder="Enter RegNo">
+<input type="number" id="mark" placeholder="Enter Marks">
+<br>
+<button id="b2">Change Text color to:</button>
+<input type="text" id="color" placeholder="Enter TextColor">
+<br>
+<button id="b3">Remove Row:</button>
+<input type="text" id="nrem" placeholder="Enter Name to Remove">
+</body>
+</html>

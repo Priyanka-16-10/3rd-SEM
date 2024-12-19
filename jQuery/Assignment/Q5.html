@@ -1,0 +1,50 @@
+<!--1/11/23-->
+<!-- update: 7/11/23 -->
+<html>
+<head>
+<title>Q5</title>
+<style>
+p{
+	background: aqua;
+	height: 100px;
+	width: 100px;
+	text-align: center;
+	position: relative;
+}
+</style>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+	$("#b1").click(function(){
+		$("p").slideDown();
+	}),
+	$("#b2").mouseenter(function(){
+		$("p").animate({left: "800px"}, 10000);                                                      
+	}),
+	$("#b3").click(function(){
+		$("p").fadeIn(2000);
+	}),
+	$("#b4").mouseleave(function(){
+		$("p").show();
+	}),
+	$("#b5").dblclick(function(){
+		$("p").hide();
+	}),
+	$("#b6").click(function(){
+		alert("The text is: \""+$("p").text()+"\"");
+	});
+});
+</script>
+</head>
+
+<body>
+<p>This is p1 paragraph.</p>
+<button id="b2">mouseenter to animate</button>
+<button id="b3">click to fadeIn</button>
+<button id="b4">mouseleave to show</button>
+<button id="b5">doubleclick to hide</button>
+<button id="b1">click to slideDown</button>
+<button id="b6">click to get paragraph text</button>
+</body>
+</html>

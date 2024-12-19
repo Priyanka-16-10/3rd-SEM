@@ -1,0 +1,42 @@
+<!--2/11/23-->
+<html>
+<head>
+<title>p5</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+	$("#b1").click(function(){
+		$("#p1").addClass("sp1");
+	}),
+    $("#b2").click(function(){
+		$("#p1").addClass("sp2");
+	}),
+    $("#b3").click(function(){
+		$("#p1").removeClass("sp2"); //sp1 bach jaega, kyuki bas sp2 remove hua hai.
+	}),
+    $("#b4").click(function(){
+		alert($("#p1").css("color")); //alert k bina no output
+    }),
+    $("#b5").click(function(){
+		$("#p1").css("color","green"); //set krne k baad addClass aur removeClass kaam nhi kr raha
+    });
+});
+</script>
+<style>
+.sp1{
+    color: red;
+}
+.sp2{
+    color: blue;
+}
+</style>
+</head>
+<body>
+<p id="p1">This is p1 paragraph.</p>
+<button id="b1">Add Class(red)</button> <br>
+<button id="b2">Add Class(blue)</button> <br>
+<button id="b3">Remove Class</button> <br>
+<button id="b4">Get color value(by .css("property"))</button> <br>
+<button id="b5">Set color to green(by .css("property","value"))</button>
+</body>
+</html>

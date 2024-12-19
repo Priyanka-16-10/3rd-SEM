@@ -1,0 +1,37 @@
+<!--8/11/23-->
+<html>
+<head>
+<title>p9</title>
+<style>
+p{
+	background: aqua;
+	height: 100px;
+	width: 100px;
+	text-align: center;
+	position: relative;
+}
+</style>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+	$("#b1").click(function(){
+		$("#p1").hide();   
+	}),
+	$("#b2").click(function(){
+		$("#p1").show().slideUp(5000).slideDown(5000);
+	}),
+	$("#b3").click(function(){
+		alert("The text is: \""+$("#p1").text()+"\""); //chain not working for get and set
+	});
+});
+</script>
+</head>
+
+<body>
+<p id="p1">This is p1 paragraph.</p>
+<button id="b1">click to hide p1</button>
+<button id="b2">click to show and slideUp</button>
+<button id="b3">click to get (and set) paragraph text</button>
+</body>
+</html>

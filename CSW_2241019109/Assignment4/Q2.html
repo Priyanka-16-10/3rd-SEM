@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <script src="code.jquery.com_jquery-3.7.1.min.js"></script>
+    <script src="bootstrap.min.js"></script>
+    <script src="popper.min.js"></script>
+    <title>Registration Page</title>
+    <style>
+        h2{
+            text-align: center;
+            color: black;
+        }
+        body{
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            background-color: rgb(246, 194, 221);
+        }
+        label{
+            font-size: 25px;
+        }
+        .container{
+            margin-top: 15px;
+            border: 2px solid rgb(21, 5, 71);
+            border-radius: 5px;
+            background-color: rgb(250, 218, 148);
+            padding: 10px;
+        }   
+        input[type=text],input[type=password],input[type=email] {
+            width: 100%;
+ 	        padding: 15px;
+ 	        display: block;
+ 	        background: rgb(187, 207, 246);
+            border:1px solid rgb(234, 111, 4) ;
+            border-radius: 4px;
+        }
+        input[type=text]:focus, input[type=password]:focus, input[type=email]:focus{
+  	        background-color:rgb(62, 250, 93);
+  	        outline: none;
+	}
+	input[type=submit] {
+  	background-color: rgb(253, 100, 228);
+ 	color: rgb(35, 1, 32);
+  	padding: 16px 20px;
+  	margin: 8px 0;
+    font-size: 20px;
+  	cursor: pointer;
+  	width: 100%;
+  	opacity: 0.9;
+	}
+	input[type=submit]:hover {
+  	opacity: .5;
+	}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <form> 	 
+        <div class="form-group">
+            <h2>Register</h2>
+        <label for="nm">Name:</label>
+        <input type="text"placeholder="Enter Name" name="nm" id="nm" required>
+        <label for="gen">Gender:</label><br>
+        <input type="radio" name="gen" id="gen" required>Male
+        <input type="radio" name="gen" id="gen" required>Female
+        <br>
+        <label for="add">Address</label>
+        <input type="text" placeholder="Enter Address" name="add" id="add" required>
+           <label for="email">Email:</label>
+           <input type="email" placeholder="Enter Email" name="email" id="email" required>
+           <label for="psw">Password:</label>
+           <input type="password" placeholder="Enter Password" name="psw" id="psw" required>
+        <input type="submit" value="Submit">
+        <div class="alert alert-danger alert-dismissible fade show">
+                <button type="button" class="close" data-dismiss="alert">&times;</button>
+                ! ! ! Submit before closing the window ! ! !
+            </div>
+          </div>
+        </form>
+    </div>
+</body>
+</html>

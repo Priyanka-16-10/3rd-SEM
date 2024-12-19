@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+input[type=text], select {
+ width: 100%;
+ padding: 10px 16px;
+ margin: 6px 0;
+ display: inline-block;
+ border: 3px inset hotpink;
+ border-radius: 5px;
+ box-sizing: border-box;
+ }
+input[type=submit] {
+ width: 100%;
+ background-color: orange;
+ color: brown;
+ padding: 12px 16px;
+ margin: 6px 0;
+ border: none;
+ border-radius: 4px;
+ cursor: pointer;
+ }
+div{
+background-color: lightyellow;
+color: blue;
+padding: 15px;
+border-radius: 3px;
+}
+input[type=submit]:hover {
+ background-color: pink;
+ }
+</style>
+</head>
+<body>
+<h2>HTML Forms always need CSS for styling.</h2>
+<div>
+<form >
+<label for="emp">Employee Name</label> 
+<input type="text" id="emp" name="employee name" placeholder="Your name..">
+<label for="dep">Department</label> 
+<input type="text" id="emp" name="department" placeholder="Your department..">
+<label for="city">City</label> 
+<select id="city" name="department" placeholder="Your city..">
+<option value="Houston">Odisha</option>
+ <option value="Tampa">West Bengal</option>
+<option value="San Francisco">Jharkhand</option>
+ </select>
+<input type="submit" 	value="Confirm">
+</form>
+</div>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Q1-Count</title>
+    <script src="code.jquery.com_jquery-3.7.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+	      $("button").click(function(){
+		    var count=$("#selected").children().length;
+		     $("body").append("Number of elements are: "+count);
+	      });
+        });
+    </script>
+</head>
+<body>
+    <div id="selected">
+        <p>Red</p>
+        <p>White</p>
+        <p>Green</p>
+        <p>Black</p>
+        <p>Blue</p>
+        <p>Orange</p>
+        </div>
+        <button>Count no. of p elements</button><br><br>
+</body>
+</html>

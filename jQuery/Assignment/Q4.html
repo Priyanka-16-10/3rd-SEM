@@ -1,0 +1,39 @@
+<!-- 1/11/23 -->
+<html>
+<head>
+<title>Q4</title>
+<style>
+#alert{
+    background: red;
+    border: 1px solid black;
+    height: 50px;
+    width: fit-content;
+    display: none;
+}
+#ok{
+    background: aqua;
+    width: fit-content;
+}
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("#b1").click(function(){
+        $("#alert").show();
+    }),
+    $("#ok").click(function(){
+        $("#alert").hide();
+    });
+});
+</script>
+</head>
+<body>
+<center>
+<div id="alert">This is an <b>Alert!!!</b>
+    <br>
+    <button id="ok">OK</button>
+</div>
+</center>
+<button id="b1">Click for Alert</button>
+</body>
+</html>

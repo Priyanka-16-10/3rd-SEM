@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <script src="code.jquery.com_jquery-3.7.1.min.js"></script>
+    <script src="bootstrap.min.js"></script>
+    <script src="popper.min.js"></script>
+    <script>
+        $("#submit").click(function(){
+        alert("The Form has been Submitted.");
+        });
+        </script>
+    <style>
+        .container {
+        margin-top:125px;
+        padding: 16px;
+        background-color: rgb(255, 255, 180);
+        border: 2px solid rgb(132, 9, 9);
+        border-radius: 10px;
+        }
+        hr{
+        border: 1px solid rgb(132, 9, 9);
+        margin-bottom: 25px;
+        }
+        .registerbtn {
+        background-color: #7192ff;
+        color: black;
+        padding: 16px 20px;
+        margin: 8px 0;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        width: 100%;
+        }
+        </style>
+</head>
+<body>
+    <form>
+        <div class="container">
+        <h1 style="text-align: center;">Upload Your File</h1>
+        <p style="text-align: center;">Please upload your document.</p>
+        <hr>
+        <label for="f"><b>File:</b></label>
+        <input type="file"placeholder="Upload Required Document" name="f" id="f" required>
+        <hr>
+        <button id="submit" class="registerbtn">Submit</button><hr>
+        <!-- <div class="alert alert-danger">
+        <strong>Danger!</strong> Upload File Before Submitting.
+        </div><hr> -->
+        <div class="progress">
+        <div class="progress-bar progress-bar-striped progress-bar-animated"
+        style="background-color:rgb(213, 93, 2); width:50%">50%</div>
+        </div>
+        </div>
+        </form>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!--1/11/23-->
+<html>
+<head>
+<title>p2</title>
+<style>
+#id1{
+	background: red;
+	height: 100px;
+	width: 100px;
+}
+</style>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+	$("button").click(function(){
+		$("button+div").hide();
+	});
+});
+</script>
+</head>
+
+<body>
+<button>Click button to hide id1
+</button>
+<div id="id1">Mai hu id1</div>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!--9/11/23-->
+<html>
+<head>
+<title>Q1</title>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script>
+
+$(document).ready(function(){
+	$("button").click(function(){
+		var count=$("#selected").children().length;
+		$("body").append("Number of elements: "+count);
+	});
+});
+</script>
+</head>
+
+<body>
+<div id="selected">
+<p>Red</p>
+<p>White</p>
+<p>Green</p>
+<p>Black</p>
+<p>Blue</p>
+<p>Orange</p>
+</div>
+<button>Count no. of elements</button>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="/js/jquery-3.7.1.js"></script>
+    <style>
+        table,th,td,tr{
+            border: 2px solid black;
+            border-collapse:collapse ;
+            width: 20%;
+            text-align: center;
+            font-family: arial;
+            margin: 10px;
+            height: 16px;
+        }
+        button
+        {
+            height: 30px;
+            width: 70px;
+            margin: 10px;
+            user-select: none;
+            border: none;
+            border-radius: 10px;
+            background-color: orange;
+        }
+        input{
+            display: block;
+            margin: 10px;
+            height: 25px;
+            border: 2px solid gray;
+            border-radius: 5px;
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Regd. No</th>
+            <th>Mark</th>
+        </tr>
+        <tr id="1">
+            <td>Thor</td>
+            <td>1</td>
+            <td>50</td>
+        </tr>
+        <tr id="2">
+            <td>Loki</td>
+            <td>2</td>
+            <td>20</td>
+        </tr>
+    </table>
+    <hr>
+    <h2 style="font-family: arial;">Enter values to add new row</h2>
+    <input type="text" placeholder="Name.." id="name">
+    <input type="text" placeholder="Regd" id="regd">
+    <input type="text" placeholder="Mark" id="mark">
+    <button id="add">Add</button>
+    <hr>
+    <h2 style="font-family: Arial;">Enter Regd. No to delete the row</h2>
+    <input type="text" placeholder="Enter ID..." id="id">
+    <button id="enter">Enter</button>
+</body>
+<script>
+     $(document).ready(function () {
+        $("#add").click(function(){
+            var n= $('#name').val();
+            var r=$('#regd').val();
+            var m=$('#mark').val();
+            var val= $('#regd').val();
+            $("table").append("<tr id="+val+"><td>"+n+"</td><td>"+r+"</td><td>"+m+"</td></tr>");
+        });
+        $("#enter").click(function(){
+            var id=$("#id").val();
+            $("#"+id).remove();
+        });
+         });
+</script>
+</html>

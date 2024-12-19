@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>A3Q6</title>
+    <script src="code.jquery.com_jquery-3.7.1.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#btn1").click(function () {
+            var nme= $("#n").val();
+            var reg=$("#r").val();
+            var s=$("#m").val();
+            var del=$("#r").val();
+                $("#table tr:last").after("<tr id="+del+" ><td>"+nme+"</td><td>"+reg+"</td><td>"+s+"</td></tr>");
+                $("#f")[0].reset();    
+            });
+            $("#btn2").click(function () {
+                 $("#table").addClass("change");
+            });
+            $("#btn3").click(function () {
+                 var removeId = $("#remove").val();
+                $("#"+removeId).remove();
+            }); 
+        });
+    </script>
+    <style>
+        h1,h2{
+            color: darkmagenta;
+        }
+        div{
+            background-color: rgb(249, 202, 210);
+            padding: 50px;
+            font-size: 20px;
+            align-items: center;
+            border-radius: 15px;
+            margin: 3%;
+        }
+        table,th,td,tr{
+            border: 3px solid black;
+            border-collapse: collapse;
+            padding: 15px;
+            width: 500px;
+            margin: 20px;
+        }
+        .change{
+            background-color: rgb(244, 208, 140);
+            color: maroon;   
+        }
+        button{
+            padding: 5px;
+            font-size: 20px;
+            border: 2px solid seagreen;
+            color: darkgreen;
+            border-radius: 5px;
+            background-color: rgb(254, 254, 108);
+        }
+        input{
+            display: block;
+            border-radius: 5px;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+    <table id="table">
+        <h1>Table Using JQuery</h1>
+        <tr>
+            <th>Name</th>
+            <th>Regd No.</th>
+            <th>Mark</th>
+        </tr>
+    </table>
+    <h2>Change color of the table:</h2>
+    <button id="btn2"><b>Change</b></button><br>
+    <h2>Enter values to add new row:</h2>
+    <form id="f">
+    <input type="text" placeholder="Enter Name.." id="n"><br>
+    <input type="text" placeholder="Enter Regd no..." id="r"><br>
+    <input type="text" placeholder="Enter Mark..." id="m">
+    </form><br>
+    <button id="btn1"><b>Add</b></button><br>
+    <h2>Enter a Regd No. to delete :</h2> <input type="text" id="remove" placeholder="Enter Regd no..."><br>
+    <button id="btn3"><b>Remove</b></button>
+</div>
+</body>
+</html>

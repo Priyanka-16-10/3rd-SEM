@@ -1,0 +1,40 @@
+<!--1/11/23-->
+<html>
+<head>
+<title>p3</title>
+<style>
+#id1{
+	background: red;
+	height: 100px;
+	width: 100px;
+}
+#id2{
+	background: blue;
+}
+</style>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+	$("#b1").click(function(){
+		$("#b1+#id1").hide();
+	}),
+	$("#b1").dblclick(function(){
+		alert("mouse in id1");
+	}),
+	$("#b2").click(function(){
+		$("#b2 #id2").toggle(); //will also work without combinators.
+	});
+});
+</script>
+</head>
+
+<body>
+<button id="b1">Click button to hide id1</button>
+<div id="id1">Mai hu id1</div>
+<button id="b2">
+Click button to hide/unhide id2
+<div id="id2">Mai hu id2</div>
+</button>
+</body>
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="code.jquery.com_jquery-3.7.1.min.js"></script>
+    <style>
+
+       #nav{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        background-color: #059862;
+        color: white;
+        height: 400px;
+        width: 13%;
+        border-radius:5px ;
+        overflow: hidden;
+        box-shadow: 0px 0px 10px black;
+        
+        
+       }
+       a{
+        text-decoration: none;
+        color: white;
+        font-family: sans-serif;
+        padding: 11px;
+        display:block;
+        
+       }
+       a:hover{
+       background-color:  #136e4c;
+       }
+       ul{
+        padding-left:10px ;
+       }
+       li:hover{
+        font-weight: bolder;
+        cursor: pointer;
+       }
+       #job1,#job2,#job3{
+        background-color: #059862;
+        box-shadow: 0px 0px 10px black;
+        border-radius: 5px;
+        height: 300px;
+        position: absolute;
+        display: none;
+        
+       
+       }
+       /* #job2{
+        background-color: #059862;
+        box-shadow: 0px 0px 10px black;
+        border-radius: 5px;
+        height: 70%;
+        position: relative;
+        
+       
+       } */
+      
+        
+       
+    </style>
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="main" style="display: flex; user-select: none;">
+    <div id="nav">
+        <a id="av">Aviation</a><a id="ar">Arts</a><a id="bus">Business</a><a href="">Education</a><a href="">Law Enforcement</a><a href="">Media</a><a href="">Medical</a><a href="">Service</a><a href="">Technolgy</a>
+    </div>
+    <div id="job">
+    <div id="job1">
+        <a href="">Aircraft dispatcher</a><a href="">Aircraft mechanic</a><a href="">Airline pilot</a><a href="">Federal Air Marshal</a><a href="">Flight attendant</a><a href="">Transportation security screener</a>
+    </div>
+    <div id="job2">
+        <a>Fashion Design</a><a>Graphic Design</a><a>Interior Design</a><a>Event Manager</a><a>Organizer</a><a>Performing Arts</a>
+    </div>
+    <div  id="job3">
+        <a >Advertising</a><a >Economics</a><a >Finance</a><a >Human resources</a><a >Accounting</a><a >Hospitality</a><a >Entertainment</a>
+    </div>
+    <div>
+        <a ></a><a ></a><a ></a><a ></a><a ></a><a ></a><a ></a>
+    </div>
+    <div>
+        <a ></a><a ></a><a ></a><a ></a><a ></a><a ></a><a ></a>
+    </div>
+    
+    <div>
+        <a ></a><a ></a><a ></a><a ></a><a ></a><a ></a><a ></a>
+    </div>
+    <div>
+        <a ></a><a ></a><a ></a><a ></a><a ></a><a ></a><a ></a>
+    </div>
+    <div>
+        <a ></a><a ></a><a ></a><a ></a><a ></a><a ></a><a ></a>
+    </div>
+    
+</div>
+</div>
+    
+   
+</body>
+<script>
+    $(document).ready(function () {
+    $("#av").click(function(){
+        $("#job1").show(300);
+    });
+    // $("#job1").mouseenter(function(){
+    //     $("#job1").show(300);
+    // });
+    $("#job1").mouseleave(function () {
+            $("#job1").hide(300);
+        });
+    $("#ar").click(function(){
+        $("#job2").show(300);
+    });
+    $("#job2").mouseleave(function () {
+            $("#job2").hide(300);
+        });
+    $("#bus").click(function(){
+        $("#job3").show(300);
+    });
+    $("#job3").mouseleave(function () {
+            $("#job3").hide(300);
+        });
+  
+           
+    });
+       
+    
+</script>
+
+</html>
